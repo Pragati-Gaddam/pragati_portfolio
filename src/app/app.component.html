@@ -1,0 +1,265 @@
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#home" (click)="closeMenu()">Pragati <span>portfolio</span></a>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen" aria-controls="primary-navigation"
+      aria-label="Toggle navigation">☰</button>
+    <div id="primary-navigation" class="nav-links" [class.open]="menuOpen">
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#experience" (click)="closeMenu()">Experience</a>
+      <a href="#credentials" (click)="closeMenu()">Credentials</a>
+      <a class="nav-contact" href="#contact" (click)="closeMenu()">Contact <span>↗</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <!-- HERO -->
+  <section class="hero section" id="home" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> .NET FULL STACK DEVELOPER</p>
+        <h1 id="hero-title">Building dependable software for <span>complex business needs.</span></h1>
+        <p class="hero-lead">
+          Senior software engineer with 14+ years of experience designing, developing
+          and supporting enterprise web applications, APIs, integrations and cloud-based solutions.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experience">View experience <span>↗</span></a>
+          <a class="button button-quiet" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta" aria-label="Career highlights">
+          <div><strong>14+</strong><span>Years of experience</span></div>
+          <div><strong>.NET</strong><span>Full-stack engineering</span></div>
+          <div><strong>Azure</strong><span>Cloud development</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Decorative software code illustration">
+        <div class="code-window">
+          <div class="window-top"><i></i><i></i><i></i><span>solution.cs</span></div>
+          <div class="code-lines" aria-hidden="true">
+            <p><b>01</b> <span class="purple">public class </span> <span class="blue">Enterprise Solution</span></p>             
+            <p><b>03</b> &nbsp; <span class="purple">public </span> <span class="blue">string</span> Deliver()</p>       
+            <p><b>05</b> &nbsp; &nbsp; <span class="green">return </span> "BusinessValue";</p>        
+          </div>
+          <div class="code-footer"><span class="status-dot"></span> Engineering with purpose</div>
+        </div>
+        <div class="floating-chip chip-top">⌘ &nbsp; .NET engineering</div>
+        <div class="floating-chip chip-bottom">☁ &nbsp; Cloud & integration</div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+    </div>
+    <div class="container scroll-note"><span></span> SCROLL TO EXPLORE</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-light" id="about" aria-labelledby="about-title">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">01 / ABOUT ME</p>
+        <h2 id="about-title">A hands-on engineer with a <span>solution-focused mindset.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p class="large-copy">
+          I have 14+ years of experience across the full software development lifecycle,
+          working on enterprise applications in healthcare, education, access control and government domains.
+        </p>
+        <p>
+          My experience includes C# and .NET application development, Angular and TypeScript
+          front ends, REST APIs, database development, Azure and AWS services, system integration,
+          automated testing and application monitoring. I work with business and technical teams
+          to turn requirements into practical, maintainable solutions.
+        </p>
+        <p>
+          I value clean code, thoughtful design, secure integrations, accessibility, reliable
+          deployments and continuous improvement throughout the application lifecycle.
+        </p>
+        <a class="text-link" href="#contact">Connect with me <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / TECHNICAL EXPERTISE</p>
+          <h2>Skills & <span>technologies</span></h2>
+        </div>
+        <p>A strong combination of software engineering expertise, modern development technologies, cloud platforms, and architectural problem-solving.</p>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card" *ngFor="let group of skillGroups; let i = index">
+          <div class="skill-number">{{ i + 1 }}</div>
+          <h3>{{ group.title }}</h3>
+          <div class="tag-list"><span class="tag" *ngFor="let skill of group.skills">{{ skill }}</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-light" id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">03 / CAREER JOURNEY</p><h2 id="experience-title">Professional <span>experience</span></h2></div>
+        <p>Progressive experience delivering and enhancing enterprise applications across public-sector, healthcare and technology environments.</p>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-item">
+          <div class="experience-index">01</div>
+          <div class="experience-details">
+            <p class="experience-date">JUNE 2025 – PRESENT</p>
+            <p class="experience-role">.NET Full Stack Developer ·</p>
+            <p>Developing and supporting healthcare applications and REST APIs </p>
+            <ul>
+              <li>Developing web applications and APIs using .NET, C#, SQL Server and Angular 18.</li>
+              <li>Implementing OpenTelemetry instrumentation for application metrics, distributed traces, dependencies and errors.</li>
+              <li>Building secure SFTP file-transfer and EDI workflows with Azure Storage, SSH key authentication, Azure Functions and Event Grid.</li>
+              <li>Working with OnBase, SQL Server, ELK and Dynatrace for integration, monitoring and reporting.</li>
+              <li>Applying TDD with Moq and implementing WCAG 2.1 AA accessibility improvements using JAWS and axe DevTools.</li>
+            </ul>
+            <div class="tag-list"><span class="tag">.NET 10</span><span class="tag">Angular 18</span><span class="tag">Azure</span><span class="tag">OpenTelemetry</span><span class="tag">Dynatrace</span><span class="tag">EDI</span><span class="tag">Accessibility</span></div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-index">02</div>
+          <div class="experience-details">
+            <p class="experience-date">OCTOBER 2023 – MAY 2025</p>
+            <p class="experience-role">.NET Full Stack Developer </p>
+            <p>Contributed to a registry application for maintaining facility, school and program records and change requests.</p>
+            <ul>
+              <li>Developed .NET 8 Web APIs and application features using C#, EF Core, SQL Server and Angular 18.</li>
+              <li>Built Angular SPA features using TypeScript modules, services, templates, directives and dependency injection.</li>
+              <li>Implemented API authentication and authorization filters, routing and CRUD operations.</li>
+              <li>Integrated Azure services including App Services, Key Vault, Event Hub, Functions, App Insights, Redis, Storage and Cosmos DB.</li>
+              <li>Used Kendo UI components, Swagger, TDD and Moq-based unit testing.</li>
+            </ul>
+            <div class="tag-list"><span class="tag">.NET 8</span><span class="tag">Angular 18</span><span class="tag">TypeScript</span><span class="tag">EF Core</span><span class="tag">Azure</span><span class="tag">Kendo UI</span></div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-index">03</div>
+          <div class="experience-details">
+            <p class="experience-date">APRIL 2017 – SEPTEMBER 2023</p>       
+            <p class="experience-role">.NET Full Stack Developer · Medicaid Management Solutions</p>
+            <p>Worked on Medicaid systems supporting claims processing, information retrieval, analysis and reporting.</p>
+            <ul>
+              <li>Developed .NET applications, REST APIs and front-end features using Angular, React, Blazor, TypeScript and JavaScript.</li>
+              <li>Built Azure Functions and integrations using Service Bus, queues, timers, Key Vault, Cosmos DB and Azure Storage.</li>
+              <li>Developed EDI batch processes to generate and process EDI 834 and EDI 820 files.</li>
+              <li>Migrated applications to .NET Core and supported cloud migration to Azure and AWS.</li>
+              <li>Built REST APIs with AWS Lambda and API Gateway; worked with EC2, CI/CD, Jenkins, SonarQube, Terraform and Azure DevOps.</li>
+              <li>Contributed to CQRS/event-sourcing patterns, technical mentoring, code reviews and team delivery.</li>
+            </ul>
+            <div class="tag-list"><span class="tag">.NET 6 / Core</span><span class="tag">Angular</span><span class="tag">React</span><span class="tag">Blazor</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">EDI</span><span class="tag">Terraform</span></div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-index">04</div>
+          <div class="experience-details">
+            <p class="experience-date">NOVEMBER 2014 – FEBRUARY 2017</p>   
+            <p class="experience-role">Senior .NET Developer · MaxProCloud</p>
+            <p>Contributed to a web-based video surveillance and access-control platform.</p>
+            <ul>
+              <li>Developed web applications and REST APIs using ASP.NET MVC, C#, Entity Framework, ADO.NET, WCF and Web API.</li>
+              <li>Designed a dependency-injection-based framework to support test-driven development.</li>
+              <li>Developed SQL Server stored procedures and PostgreSQL-backed APIs; worked on database design and performance.</li>
+              <li>Supported Jenkins CI, deployments, code reviews and technical mentoring.</li>
+            </ul>
+            <div class="tag-list"><span class="tag">ASP.NET MVC</span><span class="tag">C#</span><span class="tag">WCF</span><span class="tag">Web API</span><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">Jenkins</span></div>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-index">05</div>
+          <div class="experience-details">
+            <p class="experience-date">FEBRUARY 2012 – NOVEMBER 2014</p>          
+            <p class="experience-role">.NET Developer · VAT e-Filing, E-Prerana & E-Payment Reconciliation</p>
+            <p>Developed and enhanced government applications for tax e-filing, online payments and payment reconciliation.</p>
+            <ul>
+              <li>Built ASP.NET applications using C#, ADO.NET, Web Services, JavaScript, HTML and CSS.</li>
+              <li>Developed database objects and data-access functionality using SQL Server, Oracle and PostgreSQL.</li>
+              <li>Worked on unit testing, deployment, production validation, code optimization and database performance tuning.</li>
+              <li>Developed reports using SSRS and collaborated with QA teams on testing.</li>
+            </ul>
+            <div class="tag-list"><span class="tag">.NET Framework</span><span class="tag">ASP.NET</span><span class="tag">ADO.NET</span><span class="tag">SQL Server</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">SSRS</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   
+
+  <!-- WORKING PRINCIPLES -->
+  <section class="section callout-section" aria-labelledby="approach-title">
+    <div class="container callout">
+      <p class="eyebrow">HOW I WORK</p>
+      <h2 id="approach-title">Thoughtful design. Quality delivery. <span>Continuous improvement.</span></h2>
+      <p>From requirements analysis and solution design through development, testing, deployment and support, I focus on building software that is useful, maintainable and reliable.</p>
+      <div class="tag-list">
+        <span class="tag">Agile / Scrum / Kanban</span><span class="tag">OOAD & SOLID</span>
+        <span class="tag">Design Patterns</span><span class="tag">TDD</span>
+        <span class="tag">Code Reviews</span><span class="tag">Technical Mentoring</span>
+        <span class="tag">WCAG 2.1 AA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section section-light" id="credentials" aria-labelledby="credentials-title">
+    <div class="container two-column">
+      <div>
+        <p class="eyebrow">05 / CREDENTIALS</p>
+        <h2 id="credentials-title">Certifications & <span>education</span></h2>
+      </div>
+      <div class="about-copy">
+        <h3>Certifications</h3>
+        <ul class="credential-list">
+          <li>Microsoft Certified: Azure AI Engineer Associate</li>
+          <li>Microsoft Certified: Azure Developer Associate</li>
+          <li>AWS Certified Solutions Architect – Associate</li>
+          <li>Six Sigma Green Belt</li>
+        </ul>
+        <h3>Education</h3>
+        <p class="large-copy">B.Tech, Computer Science and Engineering</p>
+        <p>Jawaharlal Nehru Technological University Hyderabad (JNTUH)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-layout">
+      <div>
+        <p class="eyebrow">06 / CONTACT</p>
+        <h2 id="contact-title">Let's connect and <span>share ideas.</span></h2>
+        <p class="section-intro">Open to professional conversations about .NET engineering, full-stack development, cloud solutions, architecture and technical collaboration.</p>
+      </div>
+      <div class="contact-card">
+        <p class="contact-label">EMAIL</p>
+        <a href="mailto:pragati.workmail@gmail.com">pragati.workmail@gmail.com <span>↗</span></a>
+        <div class="contact-divider"></div>
+        <p class="contact-label">PROFESSIONAL LINKS</p>
+        <a href="https://www.linkedin.com/in/gpragati/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        <a href="https://github.com/Pragati-Gaddam" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+        <p class="contact-hint">Replace the email address and profile links with your own before publishing.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#home">Pragati <span>portfolio</span></a>
+    <p>.NET FULL STACK DEVELOPER</p>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
